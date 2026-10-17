@@ -3,7 +3,7 @@
 A ROS 2 node that drives the AutoDRIVE RoboRacer practice track autonomously, using only the LiDAR scan.
 
 - **Video (Driver's Eye, unlisted):** https://youtu.be/KRAcqvSctgA
-- **Fastest clean lap:** 9.496 s (default parameters, no wall contact)
+- **Fastest clean lap:** 7.373 s (default parameters, no wall contact)
 
 ## What's here
 
@@ -49,12 +49,12 @@ ros2 param set /wall_follow_node v_max 9.0
 
 | Parameter | Default | Effect |
 |---|---|---|
-| `v_max` / `v_min` | 7.0 / 2.0 m/s | Straight-line and tight-corner target speeds |
-| `full_speed_dist` | 8.0 m | Free distance ahead needed for `v_max` |
+| `v_max` / `v_min` | 7.0 / 2.2 m/s | Straight-line and tight-corner target speeds |
+| `full_speed_dist` | 5.0 m | Free distance ahead needed for `v_max` |
 | `kp_wall` / `kd_wall` | 1.0 / 0.08 | Centring PD gains |
 | `lookahead` | 1.0 m | Wall-distance projection |
 | `corner_dist` | 4.0 m | When to start blending toward the gap |
 | `car_half_width` | 0.25 m | Padding at obstacle edges |
-| `steer_slowdown` | 0.5 | Fraction of speed removed at full lock |
+| `steer_slowdown` | 0.3 | Fraction of speed removed at full lock |
 
-To lower lap time, raise `v_max` and `full_speed_dist` step by step until a lap shows wall contact, then back off.
+Tuning notes: a `v_min` of 3.0 m/s ran wide and touched the outside wall in the tight right-hand corners, and lowering `full_speed_dist` to 4.0 m did not lower lap time. To experiment further, raise `v_max` and `full_speed_dist` step by step until a lap shows wall contact, then back off.

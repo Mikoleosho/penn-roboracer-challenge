@@ -34,10 +34,10 @@ MAX_STEER_RAD = 0.52 # Steering command of 1.0 is full lock to the left (about 0
 DEFAULTS = {
     # Speed (m/s)
     'v_max': 7.0, # Target speed on open straights
-    'v_min': 2.0, # Target speed in the tightest corners
-    'full_speed_dist': 8.0, # Free distance ahead (m) at which v_max is allowed
+    'v_min': 2.2, # Target speed in the tightest corners
+    'full_speed_dist': 5.0, # Free distance ahead (m) at which v_max is allowed
     'stop_dist': 1.0, # Free distance ahead (m) at which v_min is used
-    'steer_slowdown': 0.5, # Fraction of speed removed at full steering lock
+    'steer_slowdown': 0.3, # Fraction of speed removed at full steering lock
     'v_top': 22.88, # Approximate top speed at throttle 1.0, used as feedforward
     'kp_speed': 0.4, # Throttle per m/s of speed error
     # Wall following
