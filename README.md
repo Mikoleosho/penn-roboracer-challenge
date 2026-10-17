@@ -3,7 +3,18 @@
 A ROS 2 node that drives the AutoDRIVE RoboRacer practice track autonomously, using only the LiDAR scan.
 
 - **Video (Driver's Eye, unlisted):** https://youtu.be/KRAcqvSctgA
-- **Fastest clean lap:** 7.373 s (default parameters, no wall contact)
+- **Fastest clean lap:** 7.373 s (current default parameters, no wall contact)
+
+> **Note:** The video was recorded with the earlier, more cautious speed settings, when the best clean lap was **9.496 s**. After tuning the speed parameters (table below), the car reached a **7.373 s** clean lap.
+
+### Lap results
+
+| Settings | `v_min` | `full_speed_dist` | `steer_slowdown` | Clean laps | Best lap |
+|---|---|---|---|---|---|
+| Original (in the video) | 2.0 m/s | 8.0 m | 0.5 | ~10 in a row, 9.50–9.62 s | 9.496 s |
+| Tuned (current defaults) | 2.2 m/s | 5.0 m | 0.3 | 7.560, 7.430, 7.373, then 7.4–7.6 s | **7.373 s** |
+
+`v_max` is 7.0 m/s in both runs.
 
 ## What's here
 
