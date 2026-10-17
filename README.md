@@ -2,8 +2,8 @@
 
 A ROS 2 node that drives the AutoDRIVE RoboRacer practice track autonomously, using only the LiDAR scan.
 
-- **Video (Driver's Eye, unlisted):** _TODO: add YouTube link_
-- **Fastest clean lap:** _TODO: add time_ s
+- **Video (Driver's Eye, unlisted):** https://youtu.be/KRAcqvSctgA
+- **Fastest clean lap:** 9.496 s (default parameters, no wall contact)
 
 ## What's here
 
